@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 <head>
 <title>Pendaftaran Kontak</title>
+<link rel="stylesheet" type="text/css" href="admin/efek.css">
 </head>
 <body>
-	<div>
-		<h1>Form Pendataan Kontak</h1>
-		<div>
+
+		<h1 align="center">Form Pendataan Kontak</h1>
+
+
+            <!-- Membuat form bernama simpan dengan method post agar data yang disimpan tidak tampil pada url demi keamanan pengguna, form dilanjutkan ke laman selanjutnya dengan action simpan_kontak.php -->
         <form action="simpan_kontak.php" method="POST" name="simpan">
-        <table>
+        
+            <!-- Membuat tabel dengan baris atau <tr> dan kolom atau <td> untuk mempercantik penataan teks, class sesuai data-table pada file admin/efek.css-->
+        <table class="data-table" align="center" border="3">
+            <!-- Membuat header tabel berupa kalimat pembuka dengan baris atau <tr> dan kolom atau <td> -->
         <thead>
         	<tr>
         	<td colspan="4">Silahkan Mengisi Form Pendaftaran dibawah ini.
+                <!-- Colspan digunakan untuk merge table sebanyak jumlah kolom -->
             </td>
             </tr>
         </thead>
+        <!-- Membuat table body dengan penataan teks rata kiri -->
         	<tbody align="left">
             <tr>
             <td>
             Nama
             </td>
             <td>
+            <!-- Input teks berupa nama disimpan kedalam variabel nama dengan panjang maksimum sebanyak 30 sesuai pada database dgn tabel kontak yaitu varchar(30) -->
             <input type="text" name="nama" maxlength="30"></input>
             </td>
             </tr>            
@@ -28,15 +37,18 @@
             Jenis Kelamin
             </td>
             <td>
+                <!-- input berupa radio button untuk memilih kelamin dengan nama variabel jkel dan value yaitu "Laki-laki" atau "Perempuan" yang nanti akan dikirim ke database, penggunaan <p> adalah untuk penataan radio button -->
             <p><input type="radio" name="jkel" value="Laki-laki">Laki-laki</input>
             <input type="radio" name="jkel" value="Perempuan">Perempuan</input></p>
             </td>
             </tr>          
             <tr>
+                <!-- input teks berupa email dengan maksimal panjang 40 karakter sesuai batas pada tabel kontak dalam database -->
             <td>Email</td>
             <td><input type="text" name="email" maxlength="40"></input>
             </td>
             <tr>
+                <!-- Input teks berupa variabel alamat dengan panjang maksimum 50 karakter -->
             <td>
             Alamat
             </td>
@@ -45,6 +57,7 @@
             </td>
             </tr>
             <tr>
+                <!-- Input teks berupa variabel kota dengan panjang maksimal 20 karakter -->
                 <td>
                     Kota
                 </td>
@@ -53,20 +66,20 @@
                 </td>
             </tr>
         	<tr>
+                <!-- Input teks area dengan variabel pesan dan banyak karakter sejumlah 250 karakter sesuai perkalian jumlak rows dan cols  -->
             <td>
             Pesan
             </td>
             <td>
             <textarea rows="5" cols="50" name="pesan"></textarea>
             </td>
+            <!-- button reset dan simpan sesuai dengan tipe, submit untuk menyimpan dan mengumpulkan form dengan melanjutkan sesuai action dan reset untuk mereset isi form kembali seperti semula, value digunakan untuk menampilkan teks apa yang akan ditampilkan pada button nantinya -->
             <td colspan="4" align="center">
-            <p><input class="logo" type="submit" name="simpan" value="Simpan">
-			<input class="logo" type="reset" name="hapus" value="Reset"></p>
+            <p><input type="submit" name="simpan" value="Simpan">
+			<input type="reset" name="hapus" value="Reset"></p>
             </td>
             </tr>
             </table>
         </form>
-		</div>
-	</div>
 </body>
 </html>
