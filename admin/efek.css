@@ -1,0 +1,34 @@
+body{
+	background-color:#f5f12f; /* agar background laman berwarna sesuai code hexadecimal*/
+}
+/* Table */
+.data-table {
+      min-width: 537px;
+      text-align: center; /*agar teks dalam tabel selalu berada di tengah*/
+    }
+.data-table th, td {
+  border: 1px solid #e1edff; /*pewarnaan border tabel*/
+  padding: 7px 13px; /*pemberi batas pinggir isi dalam tabel*/
+}
+/* Table Header */
+.data-table thead th{
+background-color: #508abb;
+color: solid #FFFFFF;
+border-color: 2px solid #6ea1cc;
+text-transform: uppercase;
+}
+
+/* Table Body */
+.data-table tbody td {
+background-color: #82c5f5;
+overflow-x: auto;
+}
+/*Row tabel yang bernomor ganjil*/
+.data-table tbody tr:nth-child(odd) td {
+background-color: #f4fbff;
+}
+/*Row tabel ketika dihover/disorot mouse*/
+.data-table tbody tr:hover td {
+background-color: #62cc6e;
+border-color: #ffff0f;
+}
